@@ -27,9 +27,9 @@
 
 <div align="center">
   <h2>🚀 Projects</h2>
-  <img src="https://img.shields.io/badge/Project_1-6DB33F?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Project_2-007396?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Project_3-4FC08D?style=flat-square"/>
+  <img src="https://img.shields.io/badge/자동조리화-6DB33F?style=flat-square"/>
+  <img src="https://img.shields.io/badge/졸음운전방지-007396?style=flat-square"/>
+  <img src="https://img.shields.io/badge/파이프탐사-4FC08D?style=flat-square"/>
 </div>
 
 <br />
