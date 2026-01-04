@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/render?type=slant&color=auto&height=200&section=header&text=Hello&fontSize=90&caption=I'm%20YoonMin&fontAlignY=40&captionAlignY=70" />
-
+  ![header](https://capsule-render.vercel.app/api?type=slice&color=auto&height=300&section=header&text=capsule%20render&fontSize=90)
+  ![header](https://capsule-render.vercel.app/api?text=Hello%World!)
 <br />
 
 <div align="center">
