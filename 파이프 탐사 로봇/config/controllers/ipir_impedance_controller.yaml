@@ -1,0 +1,30 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000  # Hz
+
+    ipir_joint_impedance_controller:
+      type: ipir_joint_impedance_controller/IpirJointImpedanceController
+
+ipir_joint_impedance_controller:
+  ros__parameters:
+    joints: ["lidar_joint", "front_tilt_joint", "mid_tilt_joint", "rear_tilt_joint", "roll_tilt_joint"]
+
+    stiffness: [50.0, 50.0, 50.0, 50.0, 50.0]
+    damping: [1.0, 1.0, 1.0, 1.0, 1.0]
+
+    stiffness_min: [10.0, 10.0, 10.0, 10.0, 10.0]
+    stiffness_max: [100.0, 100.0, 100.0, 100.0, 100.0]
+
+    damping_min: [0.1, 0.1, 0.1, 0.1, 0.1]
+    damping_max: [5.0, 5.0, 5.0, 5.0, 5.0]
+
+    stiffness_adjust_rate: 0.1
+    damping_adjust_rate: 0.05
+
+    external_force_threshold: 5.0
+    external_force_detected: false
+
+    use_gravity_compensation: true
+    gravity: 9.81
+    link_mass: [0.214, 0.389, 0.389, 0.214, 0.157]
+    link_com_distance: [0.00546525, 0.00005575, 0.00005663, -0.00602084, -0.01069002]

@@ -1,0 +1,10 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000  # Hz
+
+    ipir_wheel_controller:
+      type: ipir_wheel_controller/IpirWheelController
+
+ipir_wheel_controller:
+  ros__parameters:
+    wheel_joints: ["front_wheel_joint", "mid_wheel_joint", "rear_wheel_joint", "roll_wheel_joint"]

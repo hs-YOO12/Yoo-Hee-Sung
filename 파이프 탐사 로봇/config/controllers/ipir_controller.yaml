@@ -1,0 +1,21 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    ipir_joint_position_controller:
+      type: ipir_joint_position_controller/IpirJointPositionController
+
+    ipir_wheel_controller:
+      type: ipir_wheel_controller/IpirWheelController
+
+ipir_joint_position_controller:
+  ros__parameters:
+    joints: ["front_tilt_joint", "lidar_joint", "mid_tilt_joint", "rear_tilt_joint", "roll_tilt_joint"]
+    position_gain: 0.5
+
+ipir_wheel_controller:
+  ros__parameters:
+    wheel_joints: ["front_wheel_joint", "mid_wheel_joint", "rear_wheel_joint", "roll_wheel_joint"]
