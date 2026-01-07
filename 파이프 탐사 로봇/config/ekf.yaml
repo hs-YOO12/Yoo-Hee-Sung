@@ -1,0 +1,22 @@
+ekf_filter_node:
+  ros__parameters:
+    frequency: 30.0
+
+    odom0: /ipir/wheel_odom
+    odom0_config: [true,  true,  false,
+                   false, false, false,
+                   true,  false, false,
+                   false, false, false,
+                   false, false, false]
+
+    imu0: /camera/imu
+    imu0_config: [false, false, false,
+                  true,  true,  true,
+                  false, false, false,
+                  true,  true,  true,
+                  false, false, false]
+
+    base_link_frame: camera_link
+    odom_frame: odom
+    world_frame: odom
+    publish_tf: true
