@@ -1,6 +1,5 @@
 <div align="center">
-  
-  ![header](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=Hello&fontAlign=70&rotate=13&fontAlignY=25&desc=I'm%20HeeSung&descAlign=75&descAlignY=44)
+  <img src="https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=Hello&fontAlign=70&rotate=13&fontAlignY=25&desc=I'm%20HeeSung&descAlign=75&descAlignY=44" />
 </div>
 
 <br />
@@ -21,6 +20,9 @@
   <img src="https://img.shields.io/badge/MATLAB-ED1C24?style=flat-square&logo=MathWorks&logoColor=white"/>
   <img src="https://img.shields.io/badge/Gazebo-F58113?style=flat-square&logo=Gazebo&logoColor=white"/>
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
+  <br />
+  <img src="https://img.shields.io/badge/Autodesk%20Fusion%20360-FBAD41?style=flat-square&logo=Autodesk&logoColor=white"/>
+  <img src="https://img.shields.io/badge/AutoCAD-E2272D?style=flat-square&logo=AutoCAD&logoColor=white"/>
 </div>
 
 <br />
@@ -31,5 +33,3 @@
   <img src="https://img.shields.io/badge/졸음운전방지-007396?style=flat-square"/>
   <img src="https://img.shields.io/badge/파이프탐사-4FC08D?style=flat-square"/>
 </div>
-
-<br />
