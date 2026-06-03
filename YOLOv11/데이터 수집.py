@@ -4,13 +4,13 @@ import time
 
 def main():
     # 1. 이미지를 저장할 폴더 설정 (바탕화면에 yolo_dataset/images 폴더 생성)
-    save_dir = "/Users/yooheesung/Desktop/yolo_dataset/images"
+    save_dir = "/home/yoo/yolo_dataset/images"
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
         print(f"데이터 저장 폴더 생성 완료: {save_dir}")
 
     # 2. 로지텍 C920e 웹캠 연결 (화면이 안 나오면 0을 1이나 2로 변경)
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
     
     # C920e 권장 해상도 설정 (1280x720)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
