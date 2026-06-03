@@ -9,12 +9,18 @@ def main():
         os.makedirs(save_dir)
         print(f"데이터 저장 폴더 생성 완료: {save_dir}")
 
-    # 2. 로지텍 C920e 웹캠 연결 (화면이 안 나오면 0을 1이나 2로 변경)
+    # 2. 로지텍 C920e 웹캠 연결
     cap = cv2.VideoCapture(1)
     
-    # C920e 권장 해상도 설정 (1280x720)
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+    # [핵심 추가] 하드웨어가 320x240 설정을 강제로 따르도록 MJPEG 포맷 지정
+    cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
+    
+    # 이제 카메라 기기가 이 해상도를 정확하게 인식합니다.
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
+    
+    # 버퍼가 쌓여서 옛날 프레임이 찍히는 현상을 방지하기 위해 버퍼 크기 최소화
+    cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
 
     if not cap.isOpened():
         print("에러: 웹캠을 열 수 없습니다. 카메라 권한 설정을 확인하세요.")
@@ -22,7 +28,7 @@ def main():
 
     # 설정 변수
     target_count = 100       # 목표 저장 장수
-    capture_interval = 0.5   # 사진 촬영 간격 (초 단위, 0.5초마다 1장씩 자동 저장)
+    capture_interval = 0.5   # 사진 촬영 간격 (0.5초마다 1장씩 자동 저장)
     
     count = 0
     last_capture_time = time.time()
@@ -60,7 +66,7 @@ def main():
         cv2.putText(display_frame, f"Progress: {count} / {target_count}", (30, 50), 
                     cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
 
-        # 화면 보여주기
+        # 화면 보여주기 (창 크기가 320x240으로 작아져 딜레이가 사라집니다)
         cv2.imshow("Auto Data Collection - Logitech C920e", display_frame)
 
         # 'q' 키를 누르면 100장이 안 되었어도 중간에 종료 가능
