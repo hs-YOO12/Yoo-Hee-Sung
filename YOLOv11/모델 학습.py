@@ -3,7 +3,7 @@ from ultralytics import YOLO
 
 def main():
     # 1. 데이터셋 경로 및 data.yaml 경로 설정
-    dataset_dir = "/Users/yooheesung/Desktop/trafficlight.yolov11"
+    dataset_dir = "/home/yoo/trafficlight.yolov11"
     yaml_path = os.path.join(dataset_dir, "data.yaml")
     
     # data.yaml 파일이 실제로 존재하는지 확인
